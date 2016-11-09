@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
 -- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
+-- arithmetic functions with Signed or Unsigned values sffgh
 --USE ieee.numeric_std.ALL;
  
 ENTITY tbAlu IS
