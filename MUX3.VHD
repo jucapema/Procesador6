@@ -1,6 +1,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
@@ -25,15 +27,15 @@ process(PCDisp30,PCDisp22,PC4,PCAddress,PCAddress,PCSource)
 begin
 		case PCSource is
 			when "00" =>
-				PCAddressOut <= PCAddress;
+				PCAddressOut <= Pcdisp30;
 			when "01" =>
-				PCAddressOut <= PCDisp30;
-			when "10" =>
 				PCAddressOut <= PCDisp22;
+			when "10" =>
+				PCAddressOut <= PC4;
 			when "11" =>
-				PCAddressOut <= PC4;
+				PCAddressOut <= PCAddress;
 			when others =>
-				PCAddressOut <= PC4;
+				PCAddressOut <= PCAddress;
 		end case;
 end process;
 
